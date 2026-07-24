@@ -110,8 +110,13 @@
             border-bottom: 2px solid var(--accent);
             padding-bottom: 5px;
             margin-bottom: 20px;
+            margin-top: 25px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        .section-title:first-child {
+            margin-top: 0;
         }
 
         .item-block {
@@ -154,6 +159,25 @@
             margin-top: 5px;
         }
 
+        .course-category {
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 12px;
+            margin-bottom: 6px;
+            font-size: 0.98rem;
+        }
+
+        .course-list {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            color: #334155;
+        }
+
+        .course-list li {
+            margin-bottom: 4px;
+        }
+
         .pub-list {
             margin-left: 20px;
             font-size: 0.9rem;
@@ -182,15 +206,14 @@
 <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
-        <!-- Replace src below with your profile image path if uploaded to GitHub -->
-        <img src="profile.jpg">
+        <img src="profile.jpg" alt="Lukumba Phiri" class="profile-img">
         
         <h1>Lukumba Phiri, Ph.D.</h1>
         <div class="subtitle">Smart Power Grid Security & ICT Expert</div>
 
         <div class="sidebar-section">
             <h2>Contact</h2>
-            <p><strong>Location:</strong> Lusaka, Zambia</p>
+            <p><strong>Location:</strong> Plot 11202, Chalala, Lusaka, Zambia</p>
             <p><strong>Email:</strong> <a href="mailto:phirilukumba@gmail.com">phirilukumba@gmail.com</a></p>
             <p><strong>Phone:</strong> +260 979 749 437 / +260 964 021 784</p>
         </div>
@@ -199,8 +222,10 @@
             <h2>Memberships</h2>
             <ul>
                 <li>• IEEE (MIEEE)</li>
-                <li>• Engineering Institute of Zambia (EIZ)</li>
+                <li>• Engineering Institute of Zambia (PEIZ)</li>
+                <li>• Engineers Registration Board (REng)</li>
                 <li>• ICT Association of Zambia (ICTAZ)</li>
+                <li>• Assoc. of Consulting Engineers Zambia</li>
             </ul>
         </div>
 
@@ -212,6 +237,7 @@
                 <li>• Ethical Hacking Essentials</li>
                 <li>• Digital Forensic Essentials</li>
                 <li>• NIST 800-53 Control Fundamentals</li>
+                <li>• ISO 9001:2015 Internal Audit</li>
             </ul>
         </div>
 
@@ -229,7 +255,7 @@
         <section class="item-block">
             <h2 class="section-title">About Me</h2>
             <p class="item-desc">
-                Results-oriented executive and academic holding a Doctor of Philosophy in Engineering with Information Communications Technology (Smart Power Grid Security) from the University of Zambia. Experienced in leading university governance, driving academic quality assurance, managing industrial power grid projects, and carrying out advanced research at the intersection of energy systems, machine learning, and cybersecurity.
+                Strategic academic leader and Senior Electrical Engineer with over 15 years of combined experience in higher education management and industrial turnkey projects. Holder of a Doctor of Philosophy (Ph.D.) in Engineering with Information Communications Technology (Smart Power Grid Security) from the University of Zambia and Candidate for the Doctor of Engineering (DEng) at the Central University of Technology. Proven track record in curriculum transformation, quality assurance, research innovation, and complex power system operations.
             </p>
         </section>
 
@@ -239,7 +265,7 @@
             
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title">Vice Chancellor</span>
+                    <span class="item-title">Senior Lecturer / Vice Chancellor</span>
                     <span class="item-date">Feb 2026 – Present</span>
                 </div>
                 <div class="item-sub">University of Kabwe | Kabwe, Zambia</div>
@@ -250,7 +276,7 @@
 
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title">Senior Lecturer & Vice Chancellor</span>
+                    <span class="item-title">Senior Lecturer / Vice Chancellor</span>
                     <span class="item-date">Aug 2024 – Jan 2026</span>
                 </div>
                 <div class="item-sub">Information Communications University | Lusaka, Zambia</div>
@@ -273,13 +299,44 @@
             <div class="item-block">
                 <div class="item-header">
                     <span class="item-title">Part-Time Lecturer</span>
-                    <span class="item-date">Jun 2023 – Dec 2025</span>
+                    <span class="item-date">May 2023 – Dec 2025</span>
                 </div>
                 <div class="item-sub">The University of Zambia | Lusaka, Zambia</div>
                 <div class="item-desc">
                     Delivered coursework, academic mentorship, and research guidance to undergraduate and postgraduate engineering students.
                 </div>
             </div>
+        </section>
+
+        <!-- Courses Taught -->
+        <section class="item-block">
+            <h2 class="section-title">Courses Taught</h2>
+
+            <div class="course-category">Postgraduate Courses</div>
+            <ul class="course-list">
+                <li><strong>500 CSE 123:</strong> Computer Organisation and Architecture (2026 – present)</li>
+                <li><strong>503 CSF 323:</strong> Cryptography and Network Security (2026 – present)</li>
+                <li><strong>377 CS 22:</strong> Data Communication and Computer Networks (2025 – present)</li>
+                <li><strong>278 SW 15:</strong> Managing IT Data and Business Systems (2025 – present)</li>
+                <li><strong>377 CS 14:</strong> Web Technologies (2025 – present)</li>
+                <li><strong>377 CS 31:</strong> Artificial Intelligence and Expert Systems (2025 – present)</li>
+                <li><strong>EEE 6661:</strong> Cyber Forensics & Digital Investigation (2023 – present)</li>
+                <li><strong>EEE 6612:</strong> Information Security & Privacy (2023 – present)</li>
+                <li><strong>EEE 6635:</strong> Network Security (2023 – present)</li>
+                <li><strong>EEE 6655:</strong> Cyber Security Testing (2023 – present)</li>
+                <li><strong>EEE 6531:</strong> ICT Project Management (2023 – present)</li>
+                <li><strong>ICE 0008:</strong> Software Engineering Economics (2023 – present)</li>
+            </ul>
+
+            <div class="course-category">Undergraduate Courses</div>
+            <ul class="course-list">
+                <li><strong>EEE 5681:</strong> Communication Theory (2023 – present)</li>
+                <li><strong>ENG 2139:</strong> Introduction to Information and Communication Technology (2021 – present)</li>
+                <li><strong>EEE 3132:</strong> Computer Engineering (2021 – present)</li>
+                <li><strong>ICE 0322:</strong> Microwave Engineering (2021 – present)</li>
+                <li><strong>ICE 0300:</strong> Electrical Machines 1 (2021 – present)</li>
+                <li><strong>ICE 0317:</strong> Electrical Machines 2 (2021 – present)</li>
+            </ul>
         </section>
 
         <!-- Industrial Engineering Experience -->
@@ -312,38 +369,70 @@
         <!-- Education -->
         <section class="item-block">
             <h2 class="section-title">Education & Qualifications</h2>
-            
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Doctor of Engineering in Electrical Engineering (Energy Systems)</span>
+                    <span class="item-date">June 2026 – May 2029</span>
+                </div>
+                <div class="item-sub">Central University of Technology | Bloemfontein, Free State, South Africa</div>
+            </div>
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Master of Engineering in Electrical Engineering (Energy Systems)</span>
+                    <span class="item-date">2025 – 2026</span>
+                </div>
+                <div class="item-sub">Tshwane University of Technology | Pretoria, South Africa</div>
+            </div>
+
             <div class="item-block">
                 <div class="item-header">
                     <span class="item-title">Post-Doctoral Fellowship</span>
-                    <span class="item-date">2024 – 2025</span>
+                    <span class="item-date">2023 – 2025</span>
                 </div>
-                <div class="item-sub">Tshwane University of Technology, South Africa</div>
+                <div class="item-sub">Tshwane University of Technology | Pretoria, South Africa</div>
             </div>
 
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title">Ph.D. in Engineering (ICT Security)</span>
+                    <span class="item-title">Ph.D. in Engineering with ICT Security</span>
                     <span class="item-date">2021 – 2023</span>
                 </div>
-                <div class="item-sub">University of Zambia</div>
-                <div class="item-desc">Focus: Smart Power Grid Security & Cyber-Physical Risk Modeling.</div>
+                <div class="item-sub">University of Zambia | Lusaka, Zambia</div>
+                <div class="item-desc">Specialization: Smart Power Grid Security & Cyber Risk Modeling.</div>
             </div>
 
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title">Master of Science in ICT / M.Eng Electrical Engineering</span>
-                    <span class="item-date">2018 – 2026</span>
+                    <span class="item-title">Postgraduate Certificate in Teaching Methodology</span>
+                    <span class="item-date">2023 – 2024</span>
                 </div>
-                <div class="item-sub">Information Communications University / Tshwane University of Technology</div>
+                <div class="item-sub">Mulungushi University | Kabwe, Zambia</div>
             </div>
 
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title">Bachelor of Engineering (Electrical & Electronics)</span>
+                    <span class="item-title">Master of Science in Information & Communications Technology</span>
+                    <span class="item-date">2018 – 2020</span>
+                </div>
+                <div class="item-sub">Information Communications University | Lusaka, Zambia</div>
+            </div>
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Bachelor of Engineering in Electrical & Electronics</span>
                     <span class="item-date">2009 – 2014</span>
                 </div>
-                <div class="item-sub">Copperbelt University</div>
+                <div class="item-sub">Copperbelt University | Kitwe, Zambia</div>
+            </div>
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Advanced Certificate (Technician) in Electrical Engineering</span>
+                    <span class="item-date">2003 – 2005</span>
+                </div>
+                <div class="item-sub">Northern Technical College (NORTEC) | Ndola, Zambia</div>
             </div>
         </section>
 
@@ -355,6 +444,7 @@
                 <li><strong>Phiri, L., Tembo, S.</strong> (2023). <em>False data injection attacks on automatic generation control modeling and mitigation based on reinforcement learning.</em> International Journal of Internet of Things.</li>
                 <li><strong>Phiri, L., Tembo, S.</strong> (2023). <em>Detection of False Data Injection Attacks in Smart-Grid Systems: Benchmarking Deep Learning Techniques.</em> Journal of Electrical Electronics Engineering.</li>
                 <li><strong>Phiri, L., Tembo, S., Nyoni, K.J.</strong> (2022). <em>Assessing the ramifications of electric vehicle charging infrastructure on smart grid systems in Zambia.</em> IEEE ICT4DA.</li>
+                <li><strong>Phiri, L., Simon, S., Nyoni, K.J., Shahzad, U.</strong> (2022). <em>Stochastic quantification of cyber attacks' impact on smart grid contingency analysis.</em> Journal of Electrical Engineering, Electronics, Control and Computer Science.</li>
             </ul>
         </section>
     </main>
