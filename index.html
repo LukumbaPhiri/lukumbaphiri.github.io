@@ -1,457 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lukumba Phiri, Ph.D. | Academic & Engineering Portfolio</title>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Academic Portfolio of Dr. Lukumba Phiri">
+	<meta name="author" content="Lukumba Phiri">
+	
+	<title>Lukumba Phiri, Ph.D.</title>
+
+	<link href="lib/bootstrap-3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+    
     <style>
-        :root {
-            --primary: #1e3a8a;
-            --accent: #2563eb;
-            --dark: #1f2937;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --border: #e2e8f0;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: #f1f5f9;
-            padding: 20px 10px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 320px 1fr;
-        }
-
-        /* Sidebar Styling */
-        .sidebar {
-            background-color: var(--primary);
-            color: #ffffff;
-            padding: 30px 20px;
-        }
-
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #ffffff;
-            margin: 0 auto 20px auto;
-            display: block;
-        }
-
-        .sidebar h1 {
-            font-size: 1.6rem;
-            text-align: center;
-            margin-bottom: 5px;
-        }
-
-        .sidebar .subtitle {
-            font-size: 0.95rem;
-            text-align: center;
-            color: #93c5fd;
-            margin-bottom: 25px;
-        }
-
-        .sidebar-section {
-            margin-bottom: 25px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 15px;
-        }
-
-        .sidebar-section h2 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-            color: #bfdbfe;
-        }
-
-        .sidebar-section p, .sidebar-section li {
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            word-wrap: break-word;
-        }
-
-        .sidebar-section ul {
-            list-style-type: none;
-        }
-
-        .sidebar a {
-            color: #cbd5e1;
-            text-decoration: none;
-        }
-
-        /* Main Content Styling */
-        .main-content {
-            padding: 35px;
-            background: #ffffff;
-        }
-
-        .section-title {
-            font-size: 1.3rem;
-            color: var(--primary);
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-            margin-top: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .section-title:first-child {
-            margin-top: 0;
-        }
-
-        .item-block {
-            margin-bottom: 20px;
-        }
-
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-        }
-
-        .item-title {
-            font-weight: bold;
-            font-size: 1.05rem;
-            color: var(--dark);
-        }
-
-        .item-sub {
-            font-weight: 600;
-            color: var(--accent);
-            font-size: 0.95rem;
-        }
-
-        .item-date {
-            font-size: 0.85rem;
-            color: var(--gray);
-            font-weight: 500;
-        }
-
-        .item-desc {
-            font-size: 0.92rem;
-            color: #334155;
-            margin-top: 5px;
-        }
-
-        .item-desc ul {
-            margin-left: 20px;
-            margin-top: 5px;
-        }
-
-        .course-category {
-            font-weight: 700;
-            color: var(--primary);
-            margin-top: 12px;
-            margin-bottom: 6px;
-            font-size: 0.98rem;
-        }
-
-        .course-list {
-            list-style-type: disc;
-            margin-left: 20px;
-            font-size: 0.9rem;
-            color: #334155;
-        }
-
-        .course-list li {
-            margin-bottom: 4px;
-        }
-
-        .pub-list {
-            margin-left: 20px;
-            font-size: 0.9rem;
-        }
-
-        .pub-list li {
-            margin-bottom: 10px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 850px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                text-align: center;
-            }
-            .item-header {
-                flex-direction: column;
-            }
-        }
+      .blink {
+        animation: blinker 0.6s linear infinite;
+      }
+      @keyframes blinker {  
+        50% { opacity: 0; }
+      }
+      .blink-one {
+        animation: blinker-one 1s linear infinite;
+      }
+      @keyframes blinker-one {  
+        0% { opacity: 0; }
+      }
+      .blink-two {
+        animation: blinker-two 5s linear infinite;
+      }
+      @keyframes blinker-two {  
+        100% { opacity: 0; }
+      }
+      table, th, td {
+  		border: 1px solid white;
+  		border-collapse: collapse;
+	  }
+	  .myblackfont {
+		color: #333333;
+	  }
     </style>
-</head>
-<body>
+    
+  </head>
 
-<div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <img src="profile.jpg" alt="Lukumba Phiri" class="profile-img">
-        
-        <h1>Lukumba Phiri, Ph.D.</h1>
-        <div class="subtitle">Smart Power Grid Security & ICT Expert</div>
+  <body>
+	<!--############## HEADER ############################################################## -->
+	<div class="container">
+		<div class="row page-header">
+			<div class="col-md-2">
+				<a href="images/self/lukumba_phiri.jpg" target="_blank">
+					<img class="img-circle" src="images/self/lukumba_phiri_small.jpg" alt="Lukumba Phiri" style="width: 140px; height: 140px; object-fit: cover;">
+				</a>
+			</div>
 
-        <div class="sidebar-section">
-            <h2>Contact</h2>
-            <p><strong>Location:</strong> Plot 11202, Chalala, Lusaka, Zambia</p>
-            <p><strong>Email:</strong> <a href="mailto:phirilukumba@gmail.com">phirilukumba@gmail.com</a></p>
-            <p><strong>Phone:</strong> +260 979 749 437 / +260 964 021 784</p>
-        </div>
+			<div class="col-md-4">
+				<h2><font color="maroon"><b>Dr. Lukumba Phiri</b></font></h2>
+				<p class="h4" style="color:maroon">
+				<b>
+					Senior Lecturer / Vice Chancellor<br>
+					Electrical & ICT Engineering<br>	
+					University of Kabwe
+				</b></p>
+				<p class="h5" style="color:maroon"><b>Plot 11202, Chalala, Lusaka, Zambia</b></p>					
+				<span class="glyphicon glyphicon-envelope"></span> phirilukumba[at]gmail[dot]com
+			</div>
 
-        <div class="sidebar-section">
-            <h2>Memberships</h2>
-            <ul>
-                <li>• IEEE (MIEEE)</li>
-                <li>• Engineering Institute of Zambia (PEIZ)</li>
-                <li>• Engineers Registration Board (REng)</li>
-                <li>• ICT Association of Zambia (ICTAZ)</li>
-                <li>• Assoc. of Consulting Engineers Zambia</li>
-            </ul>
-        </div>
+			<div class="col-md-6 navbar-wrapper">
+				<nav class="navbar navbar-static-top" role="navigation" style="background-color: white; background-image: none;">
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="background-color: #178ACC;">
+						<span class="sr-only" style="background-color: white;">Toggle navigation</span>
+						<span class="icon-bar" style="background-color: white;"></span>
+						<span class="icon-bar" style="background-color: white;"></span>
+						<span class="icon-bar" style="background-color: white;"></span>
+					  </button>						
+					</div>
 
-        <div class="sidebar-section">
-            <h2>Certifications</h2>
-            <ul>
-                <li>• Certified Cyber Security Technician (CCT)</li>
-                <li>• Network Defense Essential (NDE)</li>
-                <li>• Ethical Hacking Essentials</li>
-                <li>• Digital Forensic Essentials</li>
-                <li>• NIST 800-53 Control Fundamentals</li>
-                <li>• ISO 9001:2015 Internal Audit</li>
-            </ul>
-        </div>
+					<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"> <a href="index.html"><span class="glyphicon glyphicon-home"></span> Home </a></li>						
+						<li><a href="research.html"><span class="glyphicon glyphicon-th-list"></span> Publications </a></li>	
+						<li><a href="project.html"><span class="glyphicon glyphicon-cog"></span> Projects </a></li>							
+					    <li><a href="teaching.html"><span class="glyphicon glyphicon-pencil"></span> Teaching </a></li>	
+					    <li><a href="student.html"><span class="glyphicon glyphicon-edit"></span> Students</a></li>
+					</ul>
+					</div>					
+				</nav>
+			</div>
+		</div>
+	</div> 
 
-        <div class="sidebar-section">
-            <h2>Languages</h2>
-            <p><strong>English:</strong> Proficient</p>
-            <p><strong>French:</strong> Basic</p>
-            <p><strong>Native:</strong> Nsenga, Bemba, Namwanga</p>
-        </div>
-    </aside>
+	<!--############## PAGE CONTENT ######################################################### -->
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- About Section -->
-        <section class="item-block">
-            <h2 class="section-title">About Me</h2>
-            <p class="item-desc">
-                Strategic academic leader and Senior Electrical Engineer with over 15 years of combined experience in higher education management and industrial turnkey projects. Holder of a Doctor of Philosophy (Ph.D.) in Engineering with Information Communications Technology (Smart Power Grid Security) from the University of Zambia and Candidate for the Doctor of Engineering (DEng) at the Central University of Technology. Proven track record in curriculum transformation, quality assurance, research innovation, and complex power system operations.
-            </p>
-        </section>
+	<div class="container">
+	
+		<!-- ====================== BIOGRAPHY and NEWS =============== -->
+		<div class="row active">
+		
+			<div class="col-md-7">
+				<p class="bigger">
+					<b><font color="maroon">BIOGRAPHY::</font></b>
+				</p>
+				<p class="bigger" align="justify">
+					<b>Dr. Lukumba Phiri</b> is a strategic academic leader and Senior Electrical Engineer with over 15 years of combined experience in higher education management and industrial turnkey projects. He currently serves as Senior Lecturer and Vice Chancellor at the <font color="maroon">University of Kabwe</font>.
+				</p>
 
-        <!-- Executive & Academic Leadership -->
-        <section class="item-block">
-            <h2 class="section-title">Leadership & Academic Experience</h2>
-            
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Senior Lecturer / Vice Chancellor</span>
-                    <span class="item-date">Feb 2026 – Present</span>
-                </div>
-                <div class="item-sub">University of Kabwe | Kabwe, Zambia</div>
-                <div class="item-desc">
-                    Executive leadership for all academic development, research delivery, strategic policy execution, manpower management, and financial sustainability. Chair of the University Senate and chief strategic spokesperson.
-                </div>
-            </div>
+				<p class="bigger" align="justify">				
+					He holds a Ph.D. in Engineering with ICT Security (Smart Power Grid Security) from the <font color="maroon">University of Zambia</font> and is currently a candidate for the Doctor of Engineering (DEng) at the <font color="maroon">Central University of Technology</font>. His industrial background includes key engineering roles at ZESCO (Kafue Gorge Lower Hydropower Project) and SCAW Zambia Limited.
+				</p>
 
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Senior Lecturer / Vice Chancellor</span>
-                    <span class="item-date">Aug 2024 – Jan 2026</span>
-                </div>
-                <div class="item-sub">Information Communications University | Lusaka, Zambia</div>
-                <div class="item-desc">
-                    Led institutional operations, research strategy, and high-level stakeholder engagement while instructing and supervising undergraduate and postgraduate research work.
-                </div>
-            </div>
+				<p class="bigger" align="justify">								
+					His research interests lie in <b>Smart Power Grid Security</b>, specifically <em><b>False Data Injection Attacks, Cyber Risk Modeling, Digital Twins, Building Energy Performance, and Machine Learning applications in Smart Energy Systems</b></em>. He is a registered professional engineer (PEIZ, REng) and a member of IEEE, ICTAZ, and ACEZ.
+				</p>
+				
+				<hr>
+				<p class="bigger">
+					<b><font color="red">:: KEY RESEARCH & SPECIALIZATION ::</font></b>
+				</p>
+				<p style="color:red">				
+					<font color="black">Focusing on ICT Security for Smart Grids, Digital Twins, and Machine Learning for Building Energy Performance.</font>
+				</p>
+				<hr>
+				
+				<!-- ----------- IMAGES / LAB GALLERY ----------------------- -->
+				<div class="container marketing">			
+					<div class="row">	
+						<div class="col-md-3">
+							<a href="images/research/smart_grid.jpg" target="_blank">
+							<img src="images/research/smart_grid_small.jpg" style="height: 140px;" alt="Smart Grid Security">
+							<br/><div class="caption" align="left"><font color="black">Smart Grid Cyber Security</font></div><br/>
+							</a>
+						</div>
+						<div class="col-md-3">
+							<a href="images/research/energy_modeling.jpg" target="_blank">
+							<img src="images/research/energy_modeling_small.jpg" style="height: 140px;" alt="Energy Performance">
+							<br/><div class="caption" align="left"><font color="black">Building Energy Modeling</font></div><br/>
+							</a>
+						</div>
+						<div class="col-md-3">
+							<a href="images/research/scada_lab.jpg" target="_blank">
+							<img src="images/research/scada_lab_small.jpg" style="height: 140px;" alt="SCADA Protection">
+							<br/><div class="caption" align="left"><font color="black">SCADA & Relay Systems</font></div><br/>
+							</a>
+						</div>
+						<div class="col-md-3">
+							<a href="images/research/digital_twin.jpg" target="_blank">
+							<img src="images/research/digital_twin_small.jpg" style="height: 140px;" alt="Digital Twins">
+							<br/><div class="caption" align="left"><font color="black">Digital Twin Integration</font></div><br/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!----------------NEWS--------------------------->
+			<div class="col-md-5">
+				<h4><font color="red"><b>News & Updates</b></font></h4>
+				<ul id="new-tabs" class="nav nav-tabs">
+					<li class="active"> <a href="#2026" data-toggle="tab">2026</a> </li>
+					<li> <a href="#2025" data-toggle="tab">2025</a> </li>
+					<li> <a href="#2024" data-toggle="tab">2024</a> </li> 	
+					<li> <a href="#2023" data-toggle="tab">2023</a> </li> 					
+				</ul>
+					    
+				<div id="news-tab-content" class="tab-content">
 
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Dean – School of Engineering</span>
-                    <span class="item-date">Oct 2023 – Jul 2024</span>
-                </div>
-                <div class="item-sub">Information Communications University | Lusaka, Zambia</div>
-                <div class="item-desc">
-                    Administered operational budgeting, curriculum accreditation standards, research innovation programs, and industry partnership initiatives across engineering disciplines.
-                </div>
-            </div>
+					<div class="tab-pane active fade in" id="2026"> 
+					<div class="news">
+				    	<ul id="ticker"> 
+						<div class="col-md-12">
+						<li><b>June: </b><font color="red">Commenced Doctor of Engineering (DEng) in Electrical Engineering at Central University of Technology.</font></li>
+						<li><b>May: </b><font color="red">Book chapter accepted for upcoming publication in DeGruyter energy series.</font></li>
+						<li><b>February: </b><font color="red">Appointed Senior Lecturer and Vice Chancellor at University of Kabwe.</font></li>
+						<li><b>February: </b><font color="red">Delivered academic presentation on Digital Tools and LMS frameworks.</font></li>
+						</div>					
+					</ul>
+				    	</div>
+					</div>
+					
+					<div class="tab-pane fade in" id="2025"> 
+					<div class="news">
+				    	<ul id="ticker"> 
+						<div class="col-md-12">
+						<li><b>December: </b><font color="blue">Published comprehensive review paper in <em><b>Energies</b></em> journal on energy performance models.</font></li>
+						<li><b>July: </b><font color="blue">Awarded Post-Doctoral Research Fellowship at Tshwane University of Technology.</font></li>
+						<li><b>January: </b><font color="blue">Engineered updated digital twin framework for building energy optimization.</font></li>
+						</div>					
+					</ul>
+				    	</div>
+					</div>
+				
+					<div class="tab-pane fade in" id="2024"> 
+					<div class="news">
+				    	<ul id="ticker"> 
+						<div class="col-md-12">
+						<li><b>August: </b><font color="red">Appointed Vice Chancellor at Information Communications University, Lusaka.</font></li>
+						<li><b>May: </b><font color="red">Completed Postgraduate Certificate in Teaching Methodology at Mulungushi University.</font></li>
+						</div>					
+					</ul>
+				    	</div>
+					</div>
+					
+					<div class="tab-pane fade in" id="2023"> 
+					<div class="news">
+				    	<ul id="ticker"> 
+						<div class="col-md-12">
+						<li><b>October: </b><font color="red">Appointed Dean of the School of Engineering at Information Communications University.</font></li>
+						<li><b>May: </b><font color="red">Successfully defended Ph.D. in Engineering with ICT Security at University of Zambia.</font></li>
+						<li><b>January: </b><font color="red">Published paper on False Data Injection Attack mitigation using Reinforcement Learning.</font></li>
+						</div>
+					</ul>
+				    	</div>
+					</div>  		    
+				</div>
+			</div>	
+		</div> <!--close of class="row"-->
+		
+		<!-- ======================== Research Interests / Publications / Groups ========================================= -->
+		<hr>
+		<div class="row active myblackfont">
+		
+			<div class="col-md-4">
+				<h4><b><font color="maroon">Research Interests</font></b></h4>
+				<p><ul><font color="blue">
+					<li> Smart Power Grid Cyber Security</li>
+					<li> False Data Injection Attack Mitigation</li>
+					<li> Physics-Informed Neural Networks</li>
+					<li> Building Energy Performance & Digital Twins</li>
+					<li> SCADA & Industrial Automation Protocols</li>
+					<li> Machine Learning in Power Systems</li>
+				</font></ul></p>
+			</div>			
+				
+			<div class="col-md-4">
+				<h4><b><font color="maroon">Key Publications</font></b></h4>
+				<ul>
+					<li><font color="blue"><b>Energies (2025):</b></font> Data-driven & Physics-based Models for Building Energy Performance.</li>
+					<li><font color="blue"><b>IJIT (2023):</b></font> False Data Injection Attack Mitigation using Reinforcement Learning.</li>
+					<li><font color="blue"><b>IEEE ICT4DA (2022):</b></font> Electric Vehicle Charging Infrastructure Impacts on Smart Grids.</li>
+				</ul>
+			</div>	
 
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Part-Time Lecturer</span>
-                    <span class="item-date">May 2023 – Dec 2025</span>
-                </div>
-                <div class="item-sub">The University of Zambia | Lusaka, Zambia</div>
-                <div class="item-desc">
-                    Delivered coursework, academic mentorship, and research guidance to undergraduate and postgraduate engineering students.
-                </div>
-            </div>
-        </section>
+			<div class="col-md-4">
+				<h4><b><font color="maroon">Professional Affiliations</font></b></h4>
+				<ul>
+					<li>Member, IEEE (MIEEE)</li>
+					<li>Professional Engineer, EIZ (PEIZ)</li>
+					<li>Registered Engineer, ERB (REng)</li>
+					<li>Member, ICT Association of Zambia (ICTAZ)</li>
+					<li>Assoc. of Consulting Engineers Zambia</li>
+				</ul>
+			</div>
+		</div>
 
-        <!-- Courses Taught -->
-        <section class="item-block">
-            <h2 class="section-title">Courses Taught</h2>
+		<!-- =========================== Work Experience & Education ========================================================== -->
+		<hr>
+		<div class="row active myblackfont">
+		
+			<div class="col-md-6">
+				<h4><b><font color="maroon">Work Experience</font></b></h4>
+				<ul>
+					<li><b>2026 – Present:</b> Senior Lecturer / Vice Chancellor, University of Kabwe</li>
+					<li><b>2024 – 2026:</b> Senior Lecturer / Vice Chancellor, Information Communications University</li>
+					<li><b>2023 – 2024:</b> Dean – School of Engineering, Information Communications University</li>
+					<li><b>2023 – 2025:</b> Part-Time Lecturer, The University of Zambia</li>
+					<li><b>2019 – 2023:</b> Senior Electrical Engineer, ZESCO - Kafue Gorge Lower Power Project</li>
+					<li><b>2017 – 2019:</b> Head of Electrical & Projects, SCAW Zambia Limited</li>
+				</ul>
+			</div>
 
-            <div class="course-category">Postgraduate Courses</div>
-            <ul class="course-list">
-
-                <li><strong>ICT 616:</strong> IoT Security (2026 – present)</li>
-                <li><strong>ICT 712:</strong> Network Design and Performance (2026 – present)</li>
-                <li><strong>500 CSE 123:</strong> Computer Organisation and Architecture (2026 – present)</li>
-                <li><strong>503 CSF 323:</strong> Cryptography and Network Security (2026 – present)</li>
-                <li><strong>377 CS 22:</strong> Data Communication and Computer Networks (2025 – present)</li>
-                <li><strong>278 SW 15:</strong> Managing IT Data and Business Systems (2025 – present)</li>
-                <li><strong>377 CS 14:</strong> Web Technologies (2025 – present)</li>
-                <li><strong>377 CS 31:</strong> Artificial Intelligence and Expert Systems (2025 – present)</li>
-                <li><strong>EEE 6661:</strong> Cyber Forensics & Digital Investigation (2023 – present)</li>
-                <li><strong>EEE 6612:</strong> Information Security & Privacy (2023 – present)</li>
-                <li><strong>EEE 6635:</strong> Network Security (2023 – present)</li>
-                <li><strong>EEE 6655:</strong> Cyber Security Testing (2023 – present)</li>
-                <li><strong>EEE 6531:</strong> ICT Project Management (2023 – present)</li>
-                <li><strong>ICE 0008:</strong> Software Engineering Economics (2023 – present)</li>
-            </ul>
-
-            <div class="course-category">Undergraduate Courses</div>
-            <ul class="course-list">
-                <li><strong>EEE 5681:</strong> Communication Theory (2023 – present)</li>
-                <li><strong>ENG 2139:</strong> Introduction to Information and Communication Technology (2021 – present)</li>
-                <li><strong>EEE 3132:</strong> Computer Engineering (2021 – present)</li>
-                <li><strong>ICE 0322:</strong> Microwave Engineering (2021 – present)</li>
-                <li><strong>ICE 0300:</strong> Electrical Machines 1 (2021 – present)</li>
-                <li><strong>ICE 0317:</strong> Electrical Machines 2 (2021 – present)</li>
-            </ul>
-        </section>
-
-        <!-- Industrial Engineering Experience -->
-        <section class="item-block">
-            <h2 class="section-title">Industrial & Engineering Experience</h2>
-
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Senior Electrical Engineer</span>
-                    <span class="item-date">Jun 2019 – Oct 2023</span>
-                </div>
-                <div class="item-sub">ZESCO - Kafue Gorge Lower Power Development Corporation</div>
-                <div class="item-desc">
-                    Managed commissioning for 13.8/330kV power generation protection & control systems (762 MW Hydropower Plant). Configured numerical relays, 330 kV GIS switchyard systems, and implemented IEC61850 SCADA automation protocols.
-                </div>
-            </div>
-
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Head of Electrical & Projects</span>
-                    <span class="item-date">Jul 2017 – Jun 2019</span>
-                </div>
-                <div class="item-sub">SCAW Zambia Limited | Kitwe, Zambia</div>
-                <div class="item-desc">
-                    Provided engineering review, technical strategy, and resource scheduling for industrial steel foundry and gas plant projects.
-                </div>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section class="item-block">
-            <h2 class="section-title">Education & Qualifications</h2>
-
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Doctor of Engineering in Electrical Engineering (Energy Systems)</span>
-                    <span class="item-date">June 2026 – May 2029</span>
-                </div>
-                <div class="item-sub">Central University of Technology | Bloemfontein, Free State, South Africa</div>
-            </div>
-
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Master of Engineering in Electrical Engineering (Energy Systems)</span>
-                    <span class="item-date">2025 – 2026</span>
-                </div>
-                <div class="item-sub">Tshwane University of Technology | Pretoria, South Africa</div>
-            </div>
-
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Post-Doctoral Fellowship</span>
-                    <span class="item-date">2023 – 2025</span>
-                </div>
-                <div class="item-sub">Tshwane University of Technology | Pretoria, South Africa</div>
-            </div>
-
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Ph.D. in Engineering with ICT Security</span>
-                    <span class="item-date">2021 – 2023</span>
-                </div>
-                <div class="item-sub">University of Zambia | Lusaka, Zambia</div>
-                <div class="item-desc">Specialization: Smart Power Grid Security & Cyber Risk Modeling.</div>
-            </div>
-
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Postgraduate Certificate in Teaching Methodology</span>
-                    <span class="item-date">2023 – 2024</span>
-                </div>
-                <div class="item-sub">Mulungushi University | Kabwe, Zambia</div>
-            </div>
-
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Master of Science in Information & Communications Technology</span>
-                    <span class="item-date">2018 – 2020</span>
-                </div>
-                <div class="item-sub">Information Communications University | Lusaka, Zambia</div>
-            </div>
-
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Bachelor of Engineering in Electrical & Electronics</span>
-                    <span class="item-date">2009 – 2014</span>
-                </div>
-                <div class="item-sub">Copperbelt University | Kitwe, Zambia</div>
-            </div>
-
-            <div class="item-block">
-                <div class="item-header">
-                    <span class="item-title">Advanced Certificate (Technician) in Electrical Engineering</span>
-                    <span class="item-date">2003 – 2005</span>
-                </div>
-                <div class="item-sub">Northern Technical College (NORTEC) | Ndola, Zambia</div>
-            </div>
-        </section>
-
-        <!-- Publications -->
-        <section class="item-block">
-            <h2 class="section-title">Selected Publications</h2>
-            <ul class="pub-list">
-                <li><strong>Phiri, L., Olwal, T.O., Mathonsi, T.E.</strong> (2025). <em>A Comprehensive Review of Data-Driven and Physics-Based Models for Energy Performance in Non-Domestic Buildings.</em> Energies, 18, 6481.</li>
-                <li><strong>Phiri, L., Tembo, S.</strong> (2023). <em>False data injection attacks on automatic generation control modeling and mitigation based on reinforcement learning.</em> International Journal of Internet of Things.</li>
-                <li><strong>Phiri, L., Tembo, S.</strong> (2023). <em>Detection of False Data Injection Attacks in Smart-Grid Systems: Benchmarking Deep Learning Techniques.</em> Journal of Electrical Electronics Engineering.</li>
-                <li><strong>Phiri, L., Tembo, S., Nyoni, K.J.</strong> (2022). <em>Assessing the ramifications of electric vehicle charging infrastructure on smart grid systems in Zambia.</em> IEEE ICT4DA.</li>
-                <li><strong>Phiri, L., Simon, S., Nyoni, K.J., Shahzad, U.</strong> (2022). <em>Stochastic quantification of cyber attacks' impact on smart grid contingency analysis.</em> Journal of Electrical Engineering, Electronics, Control and Computer Science.</li>
-            </ul>
-        </section>
-    </main>
-</div>
-
-</body>
+			<div class="col-md-6">
+				<h4><b><font color="maroon">Education</font></b></h4>
+				<ul>
+					<li><b>2026 – 2029:</b> Doctor of Engineering (DEng), Central University of Technology</li>
+					<li><b>2025 – 2026:</b> M.Eng. in Electrical Engineering, Tshwane University of Technology</li>
+					<li><b>2023 – 2025:</b> Post-Doctoral Fellowship, Tshwane University of Technology</li>
+					<li><b>2021 – 2023:</b> Ph.D. in Engineering (ICT Security), University of Zambia</li>
+					<li><b>2023 – 2024:</b> PG Cert. in Teaching Methodology, Mulungushi University</li>
+					<li><b>2018 – 2020:</b> M.Sc. in ICT, Information Communications University</li>
+					<li><b>2009 – 2014:</b> B.Eng. in Electrical & Electronics, Copperbelt University</li>
+				</ul>
+			</div>	
+		</div>		
+		
+		<!-- ======================== Guest Lectures ========================================= -->
+		<hr>
+		<div class="row active myblackfont">
+			<div class="col-md-12">			
+				<h4><b><font color="maroon">Academic Presentations & Invited Lectures</font></b></h4>
+				<ul>
+					<li><font color="maroon">February, 2026</font>: Academic Presentation on "<font color="blue">Integrating Digital Tools and Learning Management Systems in Modern Engineering Curricula</font>".</li>
+					<li><font color="maroon">October, 2025</font>: Guest Lecture on "<font color="blue">Cyber Security Hygiene and Defense Strategies in Power Infrastructure</font>".</li>
+					<li><font color="maroon">July, 2024</font>: Presentation on "<font color="blue">Digital Twin Applications for Energy Systems Optimization</font>".</li>
+					<li><font color="maroon">November, 2022</font>: Workshop Lecture on "<font color="blue">SCADA Security and Protection Protocols in High-Voltage Hydropower Plants</font>".</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+  </body>
 </html>
